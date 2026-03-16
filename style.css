@@ -31,9 +31,10 @@ border:none;
 padding:12px 20px;
 color:white;
 cursor:pointer;
+transition:background 0.3s;
 }
 
-button hover{
+button:hover{
 background:#e68900;
 }
 
