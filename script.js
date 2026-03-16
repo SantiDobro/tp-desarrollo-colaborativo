@@ -6,24 +6,30 @@ const textoVotos = document.getElementById("contador")
 boton.addEventListener("click", function(){
 
 votos = votos + 1
-
 textoVotos.innerText = "Votos: " + votos
-
-console.log("voto registrado")
 
 })
 
-
 const form = document.getElementById("formPropuesta")
+const mensaje = document.getElementById("mensaje")
 
 form.addEventListener("submit", function(e){
 
-let nombre = document.getElementById("nombre").value
-let idea = document.getElementById("idea").value
+e.preventDefault()
 
-if(nombre = "" || idea == ""){
+let nombre = document.getElementById("nombre").value.trim()
+let idea = document.getElementById("idea").value.trim()
 
-document.getElementById("mensaje").innerText = "Completa todos los campos"
+if(nombre === "" || idea === ""){
+
+mensaje.innerText = "Completa todos los campos"
+
+}else{
+
+mensaje.innerText = "Propuesta enviada correctamente"
+
+document.getElementById("nombre").value = ""
+document.getElementById("idea").value = ""
 
 }
 
