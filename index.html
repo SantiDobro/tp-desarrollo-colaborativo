@@ -9,7 +9,6 @@
 <body>
 
 <header class="navbar">
-
 <h2>Ideas Último Año</h2>
 
 <nav>
@@ -17,9 +16,7 @@
 <a href="#">Propuestas</a>
 <a href="#">Contacto</a>
 </nav>
-
 </header>
-
 
 <section class="hero">
 
@@ -32,20 +29,23 @@
 
 </section>
 
-
 <section class="propuesta">
 
 <h2>Enviar una propuesta</h2>
 
 <form id="formPropuesta">
 
-<label>Tu nombre</label>
-<input type="text" id="nombre">
+<div>
+<label for="nombre">Tu nombre:</label>
+<input type="text" id="nombre" name="nombre">
+</div>
 
-<label>Tu propuesta</label>
-<input type="text" id="idea">
+<div>
+<label for="idea">Tu propuesta:</label>
+<input type="text" id="idea" name="idea">
+</div>
 
-<button>Enviar propuesta</button>
+<button type="submit">Enviar propuesta</button>
 
 <p id="mensaje"></p>
 
@@ -53,11 +53,8 @@
 
 </section>
 
-
 <footer>
-
 <p>Promoción 2026</p>
-
 </footer>
 
 <script src="script.js"></script>
